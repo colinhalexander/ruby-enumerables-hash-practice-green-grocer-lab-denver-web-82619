@@ -49,7 +49,8 @@ end
 
 def apply_clearance(cart)
   clearance_cart = cart.reduce({}) do |memo, (key, value)|
-    
+    if value[:clearance]
+      value[:price] *= 0.8
   end
 end
 
