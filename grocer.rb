@@ -63,7 +63,9 @@ def checkout(cart, coupons)
   cart = apply_coupons(cart, coupons)
   cart = apply_clearance(cart)
   
-  total = cart.reduce
+  total = cart.reduce(0) do |memo, (key, value)|
+    
+  end
 end
 
 
