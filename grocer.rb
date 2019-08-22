@@ -15,7 +15,9 @@ end
 
 def apply_coupons(cart, coupons)
   #find any matching coupons
-  coupons.select
+  coupons.select do |n|
+    
+  end
   #apply matching coupon to item
   
   #create "item w/coupon" key-value pair, subtract from count
