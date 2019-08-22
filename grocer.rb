@@ -4,9 +4,9 @@ def consolidate_cart(cart)
     pair.each do |(key, value)|
       if !memo[key]
         memo[key] = value
-        key[:count] = 1
+        memo[key][:count] = 1
       else 
-        key[:count] += 1
+        memo[key][:count] += 1
       end
     end
     p memo
