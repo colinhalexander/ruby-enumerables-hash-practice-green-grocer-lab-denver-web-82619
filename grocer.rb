@@ -23,11 +23,18 @@ def apply_coupons(cart, coupons)
   i = 0
   while i < matching_coupons.length do
     item = "#{matching_coupons[i][:item]}"
-    
-    if cart[item][:count] % matching_coupons[i][:num]
-      cart["#{item} W/COUPON"] = cart[item]
+    cart_count = cart[item][:count]
+    coupon_num = matching_coupons[i][:num]
+    if cart_count >= coupon_num
+      if cart_count % coupon_num == 0
+        cart["#{item} W/COUPON"] = cart[item]
+        price_per_item = matching_coupons[i][:num]
+        cart["#{item} W/COUPON"][:price]
+      else
+        
+      end
     end
-    count += 1
+    i += 1
   end
   
   #create "item w/coupon" key-value pair, subtract from count
