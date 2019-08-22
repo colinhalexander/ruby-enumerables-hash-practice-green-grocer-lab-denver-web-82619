@@ -9,14 +9,8 @@ def consolidate_cart(cart)
         memo[key][:count] += 1
       end
     end
-    p memo
+    memo
   end
-  hash_cart
-  #add a count of one to single items
-  
-  #increment count for duplicates
-  
-  
 end
 
 
