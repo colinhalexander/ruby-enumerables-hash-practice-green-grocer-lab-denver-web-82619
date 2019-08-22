@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
 
   i = 0
   while i < matching_coupons.length do
-    item = "#{matching_coupons[i][:item]}"
+    item = matching_coupons[i][:item]
     cart_count = cart[item][:count]
     coupon_num = matching_coupons[i][:num]
     
