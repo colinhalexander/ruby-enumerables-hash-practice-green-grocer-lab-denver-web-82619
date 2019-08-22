@@ -39,10 +39,6 @@ def apply_coupons(cart, coupons)
       cart["#{item} W/COUPON"][:count] += coupon_num
         
       cart[item][:count] -= coupon_num
-      
-      if cart[item][:count] == 0 
-        cart.delete(item)
-      end
     end
     cart
     i += 1
