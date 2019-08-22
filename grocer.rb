@@ -26,7 +26,7 @@ def apply_coupons(cart, coupons)
     item = matching_coupons[i][:item]
     cart_count = cart[item][:count]
     coupon_num = matching_coupons[i][:num]
-    
+    p cart
     if cart_count >= coupon_num
       if !cart["#{item} W/COUPON"]
         cart["#{item} W/COUPON"] = cart[item]
@@ -46,6 +46,7 @@ def apply_coupons(cart, coupons)
         cart.delete(item)
       end
     end
+    p cart
     i += 1
   end
   cart
