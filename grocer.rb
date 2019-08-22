@@ -43,7 +43,7 @@ def apply_coupons(cart, coupons)
   
   #create "item w/coupon" key-value pair, subtract from count
   #if no remainder, delete original item
-  cart
+  
 end
 
 def apply_clearance(cart)
