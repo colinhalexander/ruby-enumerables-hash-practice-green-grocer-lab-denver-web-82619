@@ -43,6 +43,7 @@ def apply_coupons(cart, coupons)
         cart["#{item} W/COUPON"][:price] = price_per_item
         
         cart[item][:count] = (cart_count % coupon_num)
+        cart["#{item} W/COUPON"][:count] -= (cart_count % coupon_num)
       end
     end
     i += 1
