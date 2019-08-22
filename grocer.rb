@@ -3,8 +3,9 @@ def consolidate_cart(cart)
   hash_cart = cart.reduce({}) do |memo, pair|
     pair.each do |(key, value)|
       memo[key] = value
+      
     end
-    memo
+    p memo
   end
   hash_cart
   #add a count of one to single items
