@@ -31,9 +31,9 @@ def apply_coupons(cart, coupons)
       if !cart["#{item} W/COUPON"]
         cart["#{item} W/COUPON"] = cart[item]
         
-        cart["#{item} W/COUPON"][:count] = coupon_num
+        cart["#{item} W/COUPON"][:count] = 2
         
-        cart[item][:count] = cart[item][:count] - coupon_num
+        cart[item][:count] = 0
           
         cart["#{item} W/COUPON"][:price] = matching_coupons[i][:cost] / coupon_num
       else
