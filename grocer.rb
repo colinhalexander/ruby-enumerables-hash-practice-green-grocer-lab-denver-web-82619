@@ -66,6 +66,12 @@ def checkout(cart, coupons)
   total = cart.reduce(0) do |memo, (key, value)|
     memo += (value[:price] * value[:count])
   end
+  
+  if total > 100
+    total *= 0.9
+  end
+  
+  total
 end
 
 
