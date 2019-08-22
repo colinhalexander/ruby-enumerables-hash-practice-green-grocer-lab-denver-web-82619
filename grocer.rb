@@ -28,12 +28,19 @@ def apply_coupons(cart, coupons)
     coupon_num = matching_coupons[i][:num]
     
     if cart_count >= coupon_num
-      cart["#{item} W/COUPON"] = cart[item]
-      cart["#{item} W/COUPON"][:count] = 0
+      if !cart["#{item} W/COUPON"]
+        cart["#{item} W/COUPON"] = cart[item]
         
-      cart["#{item} W/COUPON"][:price] = matching_coupons[i][:cost] / matching_coupons[i][:num]
-      
-      cart["#{item} W/COUPON"][:count] 
+        cart["#{item} W/COUPON"][:count] = coupon_num
+        
+        cart[item][:count] -= coupon_num
+          
+        cart["#{item} W/COUPON"][:price] = matching_coupons[i][:cost] / coupon_num
+      else
+        cart["#{item} W/COUPON"][:count] += coupon_num
+        
+        cart[item][:count] -= coupon_num
+      end
       
       if cart[item][:count] == 0 
         cart.delete(item)
