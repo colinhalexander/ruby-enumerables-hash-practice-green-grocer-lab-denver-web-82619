@@ -4,7 +4,7 @@ def consolidate_cart(cart)
     memo[key] = value
     memo
   end
-  p hash_cart
+  puts hash_cart
   #add a count of one to single items
   
   #increment count for duplicates
