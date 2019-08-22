@@ -18,6 +18,7 @@ def apply_coupons(cart, coupons)
   matching_coupons = coupons.select do |n|
     cart[n[:item]]
   end
+  p matching_coupons
   #apply matching coupon to item
   
   #create "item w/coupon" key-value pair, subtract from count
