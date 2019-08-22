@@ -29,7 +29,9 @@ def apply_coupons(cart, coupons)
     p cart
     if cart_count >= coupon_num
       if !cart["#{item} W/COUPON"]
-        cart["#{item} W/COUPON"] = cart[item]
+        cart["#{item} W/COUPON"] = {
+          
+        }
         
         cart["#{item} W/COUPON"][:count] = 0
           
