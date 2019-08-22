@@ -1,5 +1,4 @@
 def consolidate_cart(cart)
-  #translate array of hashes (cart) into a hash
   hash_cart = cart.reduce({}) do |memo, pair|
     pair.each do |(key, value)|
       if !memo[key]
@@ -19,7 +18,9 @@ def apply_coupons(cart, coupons)
     cart[n[:item]]
   end
   if matching_coupons.length == 0 return cart
+  
   #apply matching coupon to item
+  
   
   #create "item w/coupon" key-value pair, subtract from count
   #if no remainder, delete original item
