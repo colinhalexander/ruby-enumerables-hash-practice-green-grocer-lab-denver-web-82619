@@ -63,7 +63,7 @@ def checkout(cart, coupons)
   cart = apply_coupons(cart, coupons)
   cart = apply_clearance(cart)
   
-  total = cart
+  total = cart.reduce
 end
 
 
