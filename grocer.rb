@@ -20,7 +20,10 @@ def apply_coupons(cart, coupons)
   if matching_coupons.length == 0 return cart
   
   #apply matching coupon to item
-  
+  count = 0
+  while count < matching_coupons.length do
+    cart["#{mat}"]
+  end
   
   #create "item w/coupon" key-value pair, subtract from count
   #if no remainder, delete original item
