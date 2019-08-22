@@ -48,7 +48,7 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  clearance_cart = cart.reduce({}) do |(key, value)|
+  clearance_cart = cart.reduce({}) do |memo, (key, value)|
     
   end
 end
