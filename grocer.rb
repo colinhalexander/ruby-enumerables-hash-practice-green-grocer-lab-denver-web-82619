@@ -14,7 +14,12 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  #find any matching coupons
   
+  #if yes, apply coupon to item
+  
+  #create "item w/coupon" key-value pair, subtract from count
+  #if no remainder, delete original item
 end
 
 def apply_clearance(cart)
