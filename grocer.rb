@@ -15,7 +15,7 @@ end
 
 def apply_coupons(cart, coupons)
   #find any matching coupons
-  coupons.select do |n|
+  matching_coupons = coupons.select do |n|
     cart[n[:item]]
   end
   #apply matching coupon to item
