@@ -1,7 +1,8 @@
 def consolidate_cart(cart)
   #translate array of hashes (cart) into a hash
   hash_cart = cart.reduce({}) do |memo, pair|
-    memo
+    p memo
+    p pair
     memo
   end
   hash_cart
